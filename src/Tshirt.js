@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 
 export const Tshirt = (props) => {
-    const [setCart] = useContext(CartContext);
+    const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
         const tshirt = { name: props.name, price: props.price }
         setCart(curr => [...curr, tshirt]);
